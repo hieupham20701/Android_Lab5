@@ -52,7 +52,7 @@ public class DonutAdapter extends BaseAdapter {
     }
 
     @Override
-    public View getView(int i, View view, ViewGroup viewGroup) {
+    public View getView(final int i, View view, ViewGroup viewGroup) {
 
         if(view == null){
             view = LayoutInflater.from(viewGroup.getContext()).inflate(idLayout,viewGroup,false);
@@ -66,7 +66,7 @@ public class DonutAdapter extends BaseAdapter {
 
         final ConstraintLayout linerLayout = view.findViewById(R.id.idContraint);
 
-        final  Donut donut = donutListFilter.get(i);
+        final  com.example.lab5.Donut donut = donutListFilter.get(i);
 
         if(donutListFilter != null && !donutListFilter.isEmpty()){
             txtTitle.setText(donut.getTvDonut());

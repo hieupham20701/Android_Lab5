@@ -35,7 +35,7 @@ public class CustomListViewActicity extends AppCompatActivity {
         donutList.add(new Donut(7,"Pink Donut","Spicy tasty donut family","11.0"));
 
 
-        DonutAdapter adapter =new DonutAdapter(this, R.layout.list_view, donutList);
+        DonutAdapter adapter =new DonutAdapter(this, R.layout.item_donut, donutList);
         listView.setAdapter(adapter);
         Button buttonDonut = (Button) findViewById(R.id.btnDonut);
         Button buttonPink = (Button) findViewById(R.id.btnPinkDonut);
@@ -63,7 +63,7 @@ public class CustomListViewActicity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 adapter.allDonut();
-
+                setActiveButton(buttonDonut,buttonPink, buttonFloating);
             }
         });
         buttonPink.setOnClickListener(new View.OnClickListener() {
